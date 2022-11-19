@@ -1,0 +1,19 @@
+for i in range(int(input())):
+    n=int(input())
+    s=input()
+    l=s.split(" ")
+    ll=list(map(lambda x: int(x),l))
+    fmap={}
+    count=0
+    for i in range(2*n):
+        if ll[i] not in fmap:
+            fmap[ll[i]]=1
+        else:
+            fmap[ll[i]]+=1
+        if fmap[ll[i]]>=3:
+            count=1
+    if count==0:
+        print("yes")
+    else:
+        print("no")
+
